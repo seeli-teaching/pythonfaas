@@ -1,0 +1,21 @@
+{
+    "name": "Azure Functions Python Development",
+    "build": {
+      "dockerfile": "Dockerfile",
+      "context": "."
+    },
+
+    "customizations": {
+        "vscode": {
+          "extensions": [
+            "ms-azuretools.vscode-azurefunctions",
+            "ms-python.python"
+          ]
+        }
+  
+    },
+    "forwardPorts": [7071],
+    "updateContentCommand": "pip install -r requirements.txt",
+    "remoteUser": "root"
+  }
+  
