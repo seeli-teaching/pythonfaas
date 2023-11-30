@@ -24,7 +24,7 @@ def parameter_by_route(req: func.HttpRequest) -> func.HttpResponse:
 # Passing data to the function via query parameter
 # Example http://localhost:7071/api/parameter_by_query?name=Markus
 @app.route(route="parameter_by_query")
-def parameter_by_route(req: func.HttpRequest) -> func.HttpResponse:
+def parameter_by_query(req: func.HttpRequest) -> func.HttpResponse:
 
     # Get the value of the query parameter
     name = req.params.get('name')
@@ -41,7 +41,7 @@ def parameter_by_route(req: func.HttpRequest) -> func.HttpResponse:
 # Example POST http://localhost:7071/api/parameter_by_body
 # Body: {"name": "Markus"}
 @app.route(route="parameter_by_body", methods=["POST"])
-def parameter_by_route(req: func.HttpRequest) -> func.HttpResponse:
+def parameter_by_body(req: func.HttpRequest) -> func.HttpResponse:
 
     # Get the value of the parameter out of the message body
     req_body = req.get_json()
