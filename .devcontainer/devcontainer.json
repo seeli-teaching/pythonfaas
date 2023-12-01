@@ -9,7 +9,7 @@
     "hostRequirements": {
       "cpus": 2
     },
-    "waitFor": "postCreateCommand",
+    "waitFor": "onCreateCommand",
 
     "customizations": {
         "vscode": {
@@ -21,7 +21,7 @@
   
     },
     "forwardPorts": [7071],
-    "postCreateCommand": "python3 -m venv .venv && source .venv/bin/activate",
+    "postCreateCommand": "python3 -m venv .venv && .venv/bin/activate",
     "updateContentCommand": "pip install -r requirements.txt",
     "remoteUser": "root"
   }
