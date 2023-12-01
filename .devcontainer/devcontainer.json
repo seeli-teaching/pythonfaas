@@ -9,7 +9,7 @@
     "hostRequirements": {
       "cpus": 2
     },
-    "waitFor": "onCreateCommand",
+    "waitFor": "postCreateCommand",
 
     "customizations": {
         "vscode": {
