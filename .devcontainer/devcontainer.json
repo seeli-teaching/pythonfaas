@@ -21,7 +21,7 @@
   
     },
     "forwardPorts": [7071],
-    "updateContentCommand": "python3 -m venv .venv && .venv/bin/activate",
+    "updateContentCommand": "python3 -m venv .venv && source .venv/bin/activate",
     "postCreateCommand": "pip install -r requirements.txt",
     "remoteUser": "root"
   }
