@@ -13,7 +13,12 @@ def parameter_by_route(req: func.HttpRequest) -> func.HttpResponse:
     # Get the value of the route parameter
     name = req.route_params.get('name')
 
-    info = f"The function 'parameter_by_route' was called with the parameter: {name}"
+    # Check if the parameter is a number or a string
+    if name.isdigit():
+        number = int(name)
+        info = f"The function 'parameter_by_route' was called with the numeric parameter: {number}"
+    else:
+        info = f"The function 'parameter_by_route' was called with the string parameter: {name}"
 
     logging.info(info)
 
@@ -39,15 +44,16 @@ def parameter_by_query(req: func.HttpRequest) -> func.HttpResponse:
 
 # Passing data to the function via message body
 # Example POST http://localhost:7071/api/parameter_by_body
-# Body: {"name": "Markus"}
+# Body: {"name": "Leon", "age": 18}
 @app.route(route="parameter_by_body", methods=["POST"])
 def parameter_by_body(req: func.HttpRequest) -> func.HttpResponse:
 
     # Get the value of the parameter out of the message body
     req_body = req.get_json()
     name = req_body.get('name')
+    age = req_body.get('age')
 
-    info = f"The function 'parameter_by_query' was called with the parameter: {name}"
+    info = f"The function 'parameter_by_query' was called with the string parameter: {name} and the numeric parameter: {age}"
 
     logging.info(info)
 

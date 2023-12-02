@@ -1,6 +1,11 @@
 
-# Passing data via route parameters
+# Passing data via route parameters (string)
 GET http://localhost:7071/api/parameter_by_route/Markus
+
+###
+
+# Passing data via route parameters (number)
+GET http://localhost:7071/api/parameter_by_route/42
 
 ###
 # Passing data via query parameters
@@ -12,5 +17,6 @@ POST http://localhost:7071/api/parameter_by_body
 Content-Type: application/json
 
 {
-    "name": "Markus"
+    "name": "Markus",
+    "age": 42
 }
