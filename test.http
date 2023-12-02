@@ -17,6 +17,6 @@ POST http://localhost:7071/api/parameter_by_body
 Content-Type: application/json
 
 {
-    "name": "Markus",
-    "age": 42
+    "name": "Leon",
+    "age": 18
 }
