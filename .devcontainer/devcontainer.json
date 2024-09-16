@@ -1,7 +1,7 @@
 {
     "name": "Azure Functions Python Development",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/python:1-3.9-bullseye",
+	"image": "mcr.microsoft.com/devcontainers/python:1-3.11-bullseye",
 	"features": {
 		"ghcr.io/jlaundry/devcontainer-features/azure-functions-core-tools:1": {}
 	},
@@ -15,7 +15,8 @@
         "vscode": {
           "extensions": [
 
-            "humao.rest-client"
+            "humao.rest-client",
+		  "ms-vscode.vscode-node-azure-pack"
           ]
         }
   
